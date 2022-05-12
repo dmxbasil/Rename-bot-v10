@@ -22,14 +22,16 @@
             "description": "Get this from @BotFather XD"
         },
         "BOT_OWNER": {
-            "description": "Bot Owner UserID"
+            "description": "Bot Owner UserID",
+            "value": "900873119"
         },
         "MONGODB_URI": {
             "description": "MongoDB Database URI for Saving UserID for Broadcast. Tutorial: https://www.youtube.com/watch?v=aXlF80Cn7iU"
         },
         "UPDATES_CHANNEL": {
             "description": "ID of a Channel which you want to do Force Sub to use the bot. Example: -100123456789",
-            "required": false
+            "required": false,
+            "value": "-1001674812939"
         },
         "LOG_CHANNEL": {
             "description": "Logs Channel ID for some Tracking XD. Example: -100123456789"
@@ -41,17 +43,19 @@
         },
         "SLEEP_TIME": {
             "description": "Time Gap Between Process. Keep Default.",
-            "value": "5"
+            "value": "30"
         },
         "ONE_PROCESS_ONLY": {
             "description": "Allow Only One Rename Process at a Time by User.",
             "required": false
         },
         "BROADCAST_AS_COPY": {
-            "description": "Broadcast as Copy or with Forward Tag. Value should be True/False."
+            "description": "Broadcast as Copy or with Forward Tag. Value should be True/False.",
+            "value": "True"
         },
         "SESSION_NAME": {
-            "description": "Any Bot Session Name."
+            "description": "Any Bot Session Name.",
+            "value": "DB"
         }
     },
     "buildpacks": [ 
