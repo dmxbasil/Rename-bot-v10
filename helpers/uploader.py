@@ -42,7 +42,7 @@ async def UploadFile(bot: Client, message: Message, file_path: str, file_size):
             ),
             force_document=True,
             thumb=file_thumbnail,
-            caption=f"(({file_path.rsplit('/', 1)[-1]}\n🗂**File Size:** {humanbytes(file_size)}") if (caption_ is None) else caption_),
+            caption=((f"{file_path.rsplit('/', 1)[-1]}\n🗂**File Size:** {humanbytes(file_size)}") if (caption_ is None) else caption_),
             reply_markup=InlineKeyboardMarkup( [[
                 InlineKeyboardButton("📢 UPDATES 📢", url="https://t.me/mkn_bots_updates")
                 ]]
