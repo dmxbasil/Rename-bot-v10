@@ -10,7 +10,8 @@ class RenameBot(Client):
             api_hash=Config.API_HASH,
             bot_token=Config.BOT_TOKEN,
             workers=50,
-            plugins={"root": "helpers"}
+            plugins={"root": "helpers"},
+            sleep_threshold=5,
         )
 
 bot = RenameBot()
