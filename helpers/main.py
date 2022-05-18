@@ -18,6 +18,7 @@ from helpers.uploader import UploadFile, UploadVideo, UploadAudio
 from helpers.database.add_user import AddUserToDatabase
 from helpers.display_progress import progress_for_pyrogram
 
+RenameBot = Client()
 
 @RenameBot.on_message(filters.private & filters.command("start"))
 async def start_handler(bot: client, event: message):
