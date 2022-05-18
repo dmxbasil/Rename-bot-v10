@@ -24,7 +24,8 @@ from helpers.display_progress import progress_for_pyrogram
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid
 
 
-MKN = Client(
+Renamer = Client(
+    session_name=Config.SESSION_NAME,
     api_id=Config.API_ID,
     api_hash=Config.API_HASH,
     bot_token=Config.BOT_TOKEN
@@ -53,7 +54,7 @@ async def send_msg(user_id, message):
 
 
 
-@MKN.on_message(filters.private & filters.command("start"))
+@Renamer.on_message(filters.private & filters.command("start"))
 async def start_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -75,7 +76,7 @@ async def start_handler(bot: Client, event: Message):
     )
 
 
-@MKN.on_message(filters.private & filters.command("help"))
+@Renamer.on_message(filters.private & filters.command("help"))
 async def start_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -94,7 +95,7 @@ async def start_handler(bot: Client, event: Message):
     )
 
 
-@MKN.on_message(filters.private & filters.command("about"))
+@Renamer.on_message(filters.private & filters.command("about"))
 async def start_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -113,7 +114,7 @@ async def start_handler(bot: Client, event: Message):
     )
 
 
-@MKN.on_message(filters.private & (filters.video | filters.document | filters.audio))
+@Renamer.on_message(filters.private & (filters.video | filters.document | filters.audio))
 async def rename_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -222,7 +223,7 @@ async def rename_handler(bot: Client, event: Message):
             await reply_.edit("Sorry Unkil,\n5 Minutes Passed! I can't wait more. Send me the File Once Again to Rename.")
 
 
-@MKN.on_message(filters.private & filters.photo)
+@Renamer.on_message(filters.private & filters.photo)
 async def photo_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -233,7 +234,7 @@ async def photo_handler(bot: Client, event: Message):
     await editable.edit("Permanent Custom Thumbnail Saved Successfully!")
 
 
-@MKN.on_message(filters.private & filters.command(["delete_thumbnail", "delete_thumb", "del_thumb", "delthumb"]))
+@Renamer.on_message(filters.private & filters.command(["delete_thumbnail", "delete_thumb", "del_thumb", "delthumb"]))
 async def delete_thumb_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -249,7 +250,7 @@ async def delete_thumb_handler(bot: Client, event: Message):
     )
 
 
-@MKN.on_message(filters.private & filters.command(["show_thumbnail", "show_thumb", "showthumbnail", "showthumb"]))
+@Renamer.on_message(filters.private & filters.command(["show_thumbnail", "show_thumb", "showthumbnail", "showthumb"]))
 async def show_thumb_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -280,7 +281,7 @@ async def show_thumb_handler(bot: Client, event: Message):
         await event.reply_text("No Thumbnail Found in Database!\nSend a Thumbnail to Save it for New File.", quote=True)
 
 
-@MKN.on_message(filters.private & filters.command("settings"))
+@Renamer.on_message(filters.private & filters.command("settings"))
 async def settings_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -292,7 +293,7 @@ async def settings_handler(bot: Client, event: Message):
     await OpenSettings(editable, user_id=event.from_user.id)
 
 
-@MKN.on_callback_query()
+@Renamer.on_callback_query()
 async def callback_handlers(bot: Client, cb: CallbackQuery):
     if "closeMeh" in cb.data:
         await cb.message.delete(True)
@@ -476,7 +477,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             )
 
 
-@MKN.on_message(filters.command("broadcast") & filters.user(Config.BOT_OWNER) & filters.reply)
+@Renamer.on_message(filters.command("broadcast") & filters.user(Config.BOT_OWNER) & filters.reply)
 async def broadcast_handler(m: Message):
     all_users = await db.get_all_users()
     broadcast_msg = m.reply_to_message
@@ -543,4 +544,4 @@ async def broadcast_handler(m: Message):
 
 
 
-Client.run()
+Renamer.run()
