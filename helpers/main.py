@@ -3,7 +3,7 @@ import time
 import string
 import asyncio
 from pyromod import listen
-from pyrogram import Client as RenameBot
+from pyrogram import Client 
 from pyrogram import filters
 from asyncio import TimeoutError
 from pyrogram.errors import MessageNotModified
@@ -19,7 +19,7 @@ from helpers.database.add_user import AddUserToDatabase
 from helpers.display_progress import progress_for_pyrogram
 
 
-@RenameBot.on_message(filters.private & filters.command("start"))
+@Client.on_message(filters.private & filters.command("start"))
 async def start_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -41,7 +41,7 @@ async def start_handler(bot: Client, event: Message):
     )
 
 
-@RenameBot.on_message(filters.private & filters.command("help"))
+@Client.on_message(filters.private & filters.command("help"))
 async def start_handler(bot: client, event: message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -60,7 +60,7 @@ async def start_handler(bot: client, event: message):
     )
 
 
-@RenameBot.on_message(filters.private & filters.command("about"))
+@Client.on_message(filters.private & filters.command("about"))
 async def start_handler(bot: client, event: message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -79,7 +79,7 @@ async def start_handler(bot: client, event: message):
     )
 
 
-@RenameBot.on_message(filters.private & (filters.video | filters.document | filters.audio))
+@Client.on_message(filters.private & (filters.video | filters.document | filters.audio))
 async def rename_handler(bot: client, event: message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -188,7 +188,7 @@ async def rename_handler(bot: client, event: message):
             await reply_.edit("Sorry Unkil,\n5 Minutes Passed! I can't wait more. Send me the File Once Again to Rename.")
 
 
-@RenameBot.on_message(filters.private & filters.photo)
+@Client.on_message(filters.private & filters.photo)
 async def photo_handler(bot: client, event: message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -199,7 +199,7 @@ async def photo_handler(bot: client, event: message):
     await editable.edit("Permanent Custom Thumbnail Saved Successfully!")
 
 
-@RenameBot.on_message(filters.private & filters.command(["delete_thumbnail", "delete_thumb", "del_thumb", "delthumb"]))
+@Client.on_message(filters.private & filters.command(["delete_thumbnail", "delete_thumb", "del_thumb", "delthumb"]))
 async def delete_thumb_handler(bot: client, event: message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -215,7 +215,7 @@ async def delete_thumb_handler(bot: client, event: message):
     )
 
 
-@RenameBot.on_message(filters.private & filters.command(["show_thumbnail", "show_thumb", "showthumbnail", "showthumb"]))
+@Client.on_message(filters.private & filters.command(["show_thumbnail", "show_thumb", "showthumbnail", "showthumb"]))
 async def show_thumb_handler(bot: client, event: message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -246,7 +246,7 @@ async def show_thumb_handler(bot: client, event: message):
         await event.reply_text("No Thumbnail Found in Database!\nSend a Thumbnail to Save it for New File.", quote=True)
 
 
-@RenameBot.on_message(filters.private & filters.command("settings"))
+@Client.on_message(filters.private & filters.command("settings"))
 async def settings_handler(bot: client, event: message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -258,7 +258,7 @@ async def settings_handler(bot: client, event: message):
     await OpenSettings(editable, user_id=event.from_user.id)
 
 
-@RenameBot.on_callback_query()
+@Client.on_callback_query()
 async def callback_handlers(bot: client, cb: CallbackQuery):
     if "closeMeh" in cb.data:
         await cb.message.delete(True)
