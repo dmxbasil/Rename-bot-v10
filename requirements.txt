@@ -6,4 +6,3 @@ motor
 Pillow
 hachoir
 pyromod
-
