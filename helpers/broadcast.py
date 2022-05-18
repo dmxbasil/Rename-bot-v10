@@ -7,7 +7,7 @@ import asyncio
 import datetime
 import aiofiles.os
 import traceback
-from pyrogram import Client
+from pyrogram import Client, filters
 from configs import Config
 from helpers.database.access_db import db
 from pyrogram.types import Message
