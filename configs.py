@@ -1,5 +1,3 @@
-# (c) @AbirHasan2005
-
 import os
 
 
@@ -18,53 +16,74 @@ class Config(object):
     BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
     ONE_PROCESS_ONLY = bool(os.environ.get("ONE_PROCESS_ONLY", False))
     START_TEXT = """
-This is Telegram File Renameing Bot.
+𝙷𝙴𝙻𝙻𝙾 {} 👋
 
-Send me any type of media  or File to Rename it .
+𝚃𝚑𝚒𝚜 𝚒𝚜 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝙵𝚒𝚕𝚎 𝚁𝚎𝚗𝚊𝚖𝚎𝚛 𝙱𝚘𝚝.
+𝚂𝚎𝚗𝚍 𝚖𝚎 𝚊𝚗𝚢 𝚝𝚢𝚙𝚎 𝚘𝚏 𝚖𝚎𝚍𝚒𝚊  𝚘𝚛 𝙵𝚒𝚕𝚎 𝚝𝚘 𝚁𝚎𝚗𝚊𝚖𝚎 𝚒𝚝 .
 
-Made with ❣️ by @mkn_bots_updates.
+𝙼𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 ❣️ 𝚋𝚢 @mkn_bots_updates.
     """
-    HELP_TEXT = """**Follow these Steps For Using Meh..**
+    HELP_TEXT = """**𝙵𝚘𝚕𝚕𝚘𝚠 𝚝𝚑𝚎𝚜𝚎 𝚂𝚝𝚎𝚙𝚜 𝙵𝚘𝚛 𝚄𝚜𝚒𝚗𝚐 𝙼𝚎𝚑..**
  
-**➠ Configure the Settings before using me.....
-➠ Send a photo to set it as your custom thumbnail..... 
-➠ Send any File or media you want to rename..... 
-➠ That's it, and rest is mine work..... 
-📝 Available Commands 📝
-- /start - Start the Bot
-- /help - How to Use
-- /about - About Me
-- /settings - Configure Settings 
-- /show_thumb & /del_thumb - For Thumbnail
-© Made with ❣️ @mkn_bots_updates**
+➠ 𝙲𝚘𝚗𝚏𝚒𝚐𝚞𝚛𝚎 𝚝𝚑𝚎 𝚂𝚎𝚝𝚝𝚒𝚗𝚐𝚜 𝚋𝚎𝚏𝚘𝚛𝚎 𝚞𝚜𝚒𝚗𝚐 𝚖𝚎.....
+➠ 𝚂𝚎𝚗𝚍 𝚊 𝚙𝚑𝚘𝚝𝚘 𝚝𝚘 𝚜𝚎𝚝 𝚒𝚝 𝚊𝚜 𝚢𝚘𝚞𝚛 𝚌𝚞𝚜𝚝𝚘𝚖 𝚝𝚑𝚞𝚖𝚋𝚗𝚊𝚒𝚕..... 
+➠ 𝚂𝚎𝚗𝚍 𝚊𝚗𝚢 𝙵𝚒𝚕𝚎 𝚘𝚛 𝚖𝚎𝚍𝚒𝚊 𝚢𝚘𝚞 𝚠𝚊𝚗𝚝 𝚝𝚘 𝚛𝚎𝚗𝚊𝚖𝚎..... 
+➠ 𝚃𝚑𝚊𝚝'𝚜 𝚒𝚝, 𝚊𝚗𝚍 𝚛𝚎𝚜𝚝 𝚒𝚜 𝚖𝚒𝚗𝚎 𝚠𝚘𝚛𝚔.....
+
+<u>📝 𝙰𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜 📝</u>
+
+- /start - 𝚂𝚝𝚊𝚛𝚝 𝚝𝚑𝚎 𝙱𝚘𝚝
+- /help - 𝙷𝚘𝚠 𝚝𝚘 𝚄𝚜𝚎
+- /about - 𝙰𝚋𝚘𝚞𝚝 𝙼𝚎
+- /settings - 𝙲𝚘𝚗𝚏𝚒𝚐𝚞𝚛𝚎 𝚂𝚎𝚝𝚝𝚒𝚗𝚐𝚜 
+- /show_thumb & /del_thumb - 𝙵𝚘𝚛 𝚃𝚑𝚞𝚖𝚋𝚗𝚊𝚒𝚕
+
+© 𝙼𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 ❣️ @mkn_bots_updates 
 """
     ABOUT_TEXT = """
-This is a Renamer bOt with Permanent Thumbnail Support. 
-Send Me any Media or File I can Rename It. 
+𝚃𝚑𝚒𝚜 𝚒𝚜 𝚊 𝚁𝚎𝚗𝚊𝚖𝚎𝚛 𝚋𝙾𝚝 𝚠𝚒𝚝𝚑 𝙿𝚎𝚛𝚖𝚊𝚗𝚎𝚗𝚝 𝚃𝚑𝚞𝚖𝚋𝚗𝚊𝚒𝚕 𝚂𝚞𝚙𝚙𝚘𝚛𝚝. 
+𝚂𝚎𝚗𝚍 𝙼𝚎 𝚊𝚗𝚢 𝙼𝚎𝚍𝚒𝚊 𝚘𝚛 𝙵𝚒𝚕𝚎 𝙸 𝚌𝚊𝚗 𝚁𝚎𝚗𝚊𝚖𝚎 𝙸𝚝. 
 ╭───[🔅RENAMER BOT🔅]──⍟
 │
-├🤖**My Name:** [MKN file rename bot](https://t.me/mkn_file_rename_bot)
+├🤖**𝙼𝚈 𝙽𝙰𝙼𝙴:** [𝗠𝗞𝗡 𝗳𝗶𝗹𝗲 𝗿𝗲𝗻𝗮𝗺𝗲 𝗯𝗼𝘁](https://t.me/mkn_file_rename_bot)
 │
-├📝**Language:** [Python3](https://www.python.org)
+├📝**𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎:** [𝙿𝚈𝚃𝙷𝙾𝙽 3](https://www.python.org)
 │
-├📚**Library:** [Pyrogram](https://docs.pyrogram.org)
+├📚**𝙻𝙸𝙱𝚁𝙰𝚁𝚈:** [𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼](https://docs.pyrogram.org)
 │
-├📡**Hosted On:** [Heorku](https://heroku.com)
+├📡**𝙷𝙾𝚂𝚃𝙴 𝙾𝙽:** [𝙷𝙴𝚁𝙾𝙺𝚄](https://heroku.com)
 │
-├👨‍💻**Owner:** [Mr.MKN TG](https://t.me/mr_MKN) 
+├👨‍💻**𝙾𝚆𝙽𝙴𝚁:** [𝑀𝑟.𝑀𝐾𝑁 𝑇𝐺](https://t.me/mr_MKN) 
 │
-├👥**Developer:** [AbirHasan2005](https://t.me/AbirHasan2005)
+├👥**𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛:** [ᗩᗷIᖇᕼᗩՏᗩᑎ2005](https://t.me/AbirHasan2005)                                                                             
 │
-├🔔**Bot Updates:** [Mᴋɴ Bᴏᴛᴢ™](https://t.me/mkn_bots_updates)
+├🔔**𝙱𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎𝚜:** [Mᴋɴ Bᴏᴛᴢ™](https://t.me/mkn_bots_updates)
 │
 ╰──────[ 😎 ]───────────⍟
     """
     PROGRESS = """\n
-╭───[**🔅Progress Bar🔅**]───⍟
-│
-├📁 Size : {2}
-├✅ Done : {1}
-├🚀 Percentage : {0}%
-├⚡ Speed : {3}/s
-├⏱️ Time : {4}
-╰─────────────────⍟"""
+╭━━━━━━━━━━━━━━━➣
+┣⪼🗂️ 𝚂𝙸𝚉𝙴 : {2}
+┣⪼✅ 𝙳𝙾𝙽𝙴 : {1}
+┣⪼🌀 𝙿𝙴𝚁𝙲𝙴𝙽𝚃𝙰𝙶𝙴 : {0}%
+┣⪼🚀 𝚂𝙿𝙴𝙴𝙳 : {3}/s
+┣⪼⏳️ Time : {4}
+╰━━━━━━━━━━━━━━━➣"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                               
