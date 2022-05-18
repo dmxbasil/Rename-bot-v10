@@ -57,7 +57,7 @@ async def UploadFile(bot: Client, message: Message, file_path: str, file_size):
         )
     except Exception as err:
         try:
-            await message.edit((f"Failed to File!\n**Error:**\n`{err}`")
+            await message.edit(f"Failed to File!\n**Error:**\n`{err}`")
             await asyncio.sleep(50)
         except:
             print(f"Failed to Upload File!\nError: {err}")
