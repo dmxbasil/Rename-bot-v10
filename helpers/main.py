@@ -42,7 +42,7 @@ async def start_handler(bot: Client, event: Message):
 
 
 @Client.on_message(filters.private & filters.command("help"))
-async def start_handler(bot: client, event: message):
+async def start_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
     if FSub == 400:
@@ -61,7 +61,7 @@ async def start_handler(bot: client, event: message):
 
 
 @Client.on_message(filters.private & filters.command("about"))
-async def start_handler(bot: client, event: message):
+async def start_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
     if FSub == 400:
@@ -80,7 +80,7 @@ async def start_handler(bot: client, event: message):
 
 
 @Client.on_message(filters.private & (filters.video | filters.document | filters.audio))
-async def rename_handler(bot: client, event: message):
+async def rename_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
     if FSub == 400:
@@ -189,7 +189,7 @@ async def rename_handler(bot: client, event: message):
 
 
 @Client.on_message(filters.private & filters.photo)
-async def photo_handler(bot: client, event: message):
+async def photo_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
     if FSub == 400:
@@ -200,7 +200,7 @@ async def photo_handler(bot: client, event: message):
 
 
 @Client.on_message(filters.private & filters.command(["delete_thumbnail", "delete_thumb", "del_thumb", "delthumb"]))
-async def delete_thumb_handler(bot: client, event: message):
+async def delete_thumb_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
     if FSub == 400:
@@ -216,7 +216,7 @@ async def delete_thumb_handler(bot: client, event: message):
 
 
 @Client.on_message(filters.private & filters.command(["show_thumbnail", "show_thumb", "showthumbnail", "showthumb"]))
-async def show_thumb_handler(bot: client, event: message):
+async def show_thumb_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
     if FSub == 400:
@@ -247,7 +247,7 @@ async def show_thumb_handler(bot: client, event: message):
 
 
 @Client.on_message(filters.private & filters.command("settings"))
-async def settings_handler(bot: client, event: message):
+async def settings_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
     if FSub == 400:
@@ -259,7 +259,7 @@ async def settings_handler(bot: client, event: message):
 
 
 @Client.on_callback_query()
-async def callback_handlers(bot: client, cb: CallbackQuery):
+async def callback_handlers(bot: Client, cb: CallbackQuery):
     if "closeMeh" in cb.data:
         await cb.message.delete(True)
     elif "openSettings" in cb.data:
