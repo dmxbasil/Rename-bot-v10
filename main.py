@@ -9,7 +9,7 @@ from pyrogram import Client, filters
 from asyncio import TimeoutError
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
-
+from helpers.database.bcast_db import insert, getid
 from configs import Config
 from helpers.settings import OpenSettings
 from helpers.database.access_db import db
@@ -30,6 +30,7 @@ RenameBot = Client(
 
 @RenameBot.on_message(filters.private & filters.command("start"))
 async def start_handler(bot: Client, event: Message):
+    insert(int(Message.chat.id))
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
     if FSub == 400:
@@ -449,6 +450,27 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
 	        ]]
                 )
             )
-                   
 
+
+@RenameBot.on_message(filters.private & filters.user(configs.BOT_OWNER) & filters.command(["broadcast"]))
+async def broadcast(bot, message):
+ if (message.reply_to_message):
+   ms = await message.reply_text("Geting All ids from database ...........")
+   ids = getid()
+   tot = len(ids)
+   await ms.edit(f"Starting Broadcast .... \n Sending Message To {tot} Users")
+   for id in ids:
+     try:
+     	await message.reply_to_message.copy(id)
+     except:
+     	pass
+
+@RenameBot.on_message(filters.private & filters.user(configs.BOT_OWNER) & filters.command(["users"]))
+async def get_users(client: Client, message: Message):
+    msg = await client.send_message(chat_id=message.chat.id, text="...weit iam collect uses count")
+    ids = getid()
+    tot = len(ids)
+    await msg.edit(f"Total uses = {tot}")
+
+                  
 RenameBot.run()
