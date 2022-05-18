@@ -13,4 +13,4 @@ echo """
 | ⚡️ Bot is Starting ⚡️|
 ------------------------
 """
-python3 main.py
+python3 boy.py
