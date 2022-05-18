@@ -1,23 +1,20 @@
 from pyrogram import Client
-from configs import Config
+import os
+
+API_ID = int(os.environ.get("API_ID", 12345))                                              
+API_HASH = os.environ.get("API_HASH", "")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
 
-class App(Client):
-
-    def __init__(self):
-        super().__init__(
-            "telegram",                        
-            api_id=Config.API_ID,
-            api_hash=Config.API_HASH,
-            bot_token=Config.BOT_TOKEN,
-            plugins=dict(
-                root="helpers"
-            )
-        )
-
-bot = App()
-bot.run()
-
-
-
-
+if __name__ == "__main__" :
+    plugins = dict(
+        root="helpers"
+    )
+    app = Client(
+        "bot",
+        bot_token=BOT_TOKEN,
+        api_id=API_ID,
+        api_hash=API_HASH,
+        plugins={"root": "helpers"}, 
+    )
+    app.run()
