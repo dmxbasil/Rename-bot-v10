@@ -22,7 +22,7 @@ This is Telegram File Renameing Bot.
 
 Send me any type of media  or File to Rename it .
 
-Made with ❤ by @TeleRoidGroup.
+Made with ❣️ by @mkn_bots_updates.
     """
     HELP_TEXT = """**Follow these Steps For Using Meh..**
  
@@ -36,14 +36,14 @@ Made with ❤ by @TeleRoidGroup.
 - /about - About Me
 - /settings - Configure Settings 
 - /show_thumb & /del_thumb - For Thumbnail
-© Made with ❤ By @TheTeleRoid**
+© Made with ❣️ @mkn_bots_updates**
 """
     ABOUT_TEXT = """
 This is a Renamer bOt with Permanent Thumbnail Support. 
 Send Me any Media or File I can Rename It. 
-╭───[🔅@RenamerXDBot🔅]──⍟
+╭───[🔅RENAMER BOT🔅]──⍟
 │
-├🤖**My Name:** [@RenameDBot](https://t.me/Renamedbot)
+├🤖**My Name:** [MKN file rename bot](https://t.me/mkn_file_rename_bot)
 │
 ├📝**Language:** [Python3](https://www.python.org)
 │
@@ -51,11 +51,11 @@ Send Me any Media or File I can Rename It.
 │
 ├📡**Hosted On:** [Heorku](https://heroku.com)
 │
-├👨‍💻**Developer:** [@Predator](https://t.me/PredatorHackerzZ) 
+├👨‍💻**Owner:** [Mr.MKN TG](https://t.me/mr_MKN) 
 │
-├👥**Bot Support:** [Support](https://t.me/TeleRoid14)
+├👥**Developer:** [AbirHasan2005](https://t.me/AbirHasan2005)
 │
-├🔔**Bot Updates:** [Channel](https://t.me/TeleRoidGroup)
+├🔔**Bot Updates:** [Mᴋɴ Bᴏᴛᴢ™](https://t.me/mkn_bots_updates)
 │
 ╰──────[ 😎 ]───────────⍟
     """
@@ -63,12 +63,8 @@ Send Me any Media or File I can Rename It.
 ╭───[**🔅Progress Bar🔅**]───⍟
 │
 ├📁 Size : {2}
-│
 ├✅ Done : {1}
-│
 ├🚀 Percentage : {0}%
-│
 ├⚡ Speed : {3}/s
-│
 ├⏱️ Time : {4}
 ╰─────────────────⍟"""
