@@ -39,8 +39,8 @@ async def start_handler(bot: Client, event: Message):
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("Channel", url="https://t.me/TeleRoidGroup"),
-                 InlineKeyboardButton("Support", url="https://t.me/TeleRoid14")],
+                [InlineKeyboardButton("Channel", url="https://t.me/mkn_bots_updates"),
+                 InlineKeyboardButton("Support", url="https://t.me/MKN_BOTZ_DISCUSSION_GROUP")],
                 [InlineKeyboardButton("🍃 Help", callback_data="help"),
                  InlineKeyboardButton("🗣️ About", callback_data="about")],
                 [InlineKeyboardButton("🔐 Close", callback_data="closeMeh")]
@@ -413,58 +413,41 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             Config.ABOUT_TEXT,
             parse_mode="Markdown",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-					[
-						InlineKeyboardButton("🔅 Sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://t.me/Moviesflixers_DL")
-					],
-					[
-						InlineKeyboardButton("♻ Help", callback_data="help"),
-						InlineKeyboardButton("🏠 Hᴏᴍᴇ", callback_data="home")
-					]
-	        ]
+            reply_markup=InlineKeyboardMarkup( [[
+                InlineKeyboardButton("♻ Help", callback_data="help"),
+		InlineKeyboardButton("🏠 Hᴏᴍᴇ", callback_data="home")
+	        ]]
+	        )
             )
-        )
 
     elif "help" in cb.data:
         await cb.edit_message_text(
             Config.HELP_TEXT,
             parse_mode="Markdown",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                                        [
-						InlineKeyboardButton("🔅 Sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ", url="https://t.me/Moviesflixers_DL")
-					],
-					[
-						InlineKeyboardButton("👥 Aʙᴏᴜᴛ", callback_data="about"),
-						InlineKeyboardButton("🏠 Hᴏᴍᴇ", callback_data="home")
-					]
-                ]
+            reply_markup=InlineKeyboardMarkup( [[
+                InlineKeyboardButton("👥 Aʙᴏᴜᴛ", callback_data="about"),
+	        InlineKeyboardButton("🏠 Hᴏᴍᴇ", callback_data="home")
+		]]               
+                )
             )
-        )
-
+            
     elif "home" in cb.data:
         await cb.edit_message_text(
             Config.START_TEXT,
             parse_mode="Markdown",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-						InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/TeleRoid14"),
-						InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url="https://t.me/TeleRoidGroup")
-					],
-                                        [
-						InlineKeyboardButton("🍃 Help ", callback_data="help"),
-						InlineKeyboardButton("🗣️ About", callback_data="about")
-			                ],
-                                        [
-						InlineKeyboardButton("🔐 Cʟᴏsᴇ ", callback_data="closeMeh") 
-					]
-                ]
+            reply_markup=InlineKeyboardMarkup( [[
+                InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/mkn_bots_updates"),
+		InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url="https://t.me/MKN_BOTZ_DISCUSSION_GROUP")
+		],[
+                InlineKeyboardButton("🍃 Help ", callback_data="help"),
+                InlineKeyboardButton("🗣️ About", callback_data="about")
+                ],[
+                InlineKeyboardButton("🔐 Cʟᴏsᴇ ", callback_data="closeMeh") 
+	        ]]
+                )
             )
-        )
-        
+                   
 
 RenameBot.run()
