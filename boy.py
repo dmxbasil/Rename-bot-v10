@@ -1,7 +1,7 @@
 from pyrogram import Client
 from configs import Config
 
-class RenameBot(Client):
+class App(Client):
 
     def __init__(self):
         super().__init__(
@@ -14,5 +14,5 @@ class RenameBot(Client):
             sleep_threshold=5,
         )
 
-bot = RenameBot()
+bot = App()
 bot.run()
