@@ -478,7 +478,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
 
 
 @Renamer.on_message(filters.command("broadcast") & filters.user(Config.BOT_OWNER) & filters.reply)
-async def broadcast_handler(m: Message):
+async def broadcast_handler(bot: Client,  m: Message):
     all_users = await db.get_all_users()
     broadcast_msg = m.reply_to_message
     while True:
