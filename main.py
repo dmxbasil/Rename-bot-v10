@@ -452,7 +452,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             )
 
 
-@RenameBot.on_message(filters.private & filters.user(configs.BOT_OWNER) & filters.command(["broadcast"]))
+@RenameBot.on_message(filters.private & filters.user(Config.BOT_OWNER) & filters.command(["broadcast"]))
 async def broadcast(bot, message):
  if (message.reply_to_message):
    ms = await message.reply_text("Geting All ids from database ...........")
@@ -465,7 +465,7 @@ async def broadcast(bot, message):
      except:
      	pass
 
-@RenameBot.on_message(filters.private & filters.user(configs.BOT_OWNER) & filters.command(["users"]))
+@RenameBot.on_message(filters.private & filters.user(Config.BOT_OWNER) & filters.command(["users"]))
 async def get_users(client: Client, message: Message):
     msg = await client.send_message(chat_id=message.chat.id, text="...weit iam collect uses count")
     ids = getid()
