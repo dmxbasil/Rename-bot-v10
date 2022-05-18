@@ -1,7 +1,7 @@
 from pyrogram import Client
 from configs import Config
 
-class Bot(Client):
+class RenameBot(Client):
 
     def __init__(self):
         super().__init__(
@@ -13,5 +13,5 @@ class Bot(Client):
             plugins={"root": "helpers"}
         )
 
-bot = Bot()
+bot = RenameBot()
 bot.run()
