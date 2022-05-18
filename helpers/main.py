@@ -20,7 +20,7 @@ from helpers.display_progress import progress_for_pyrogram
 
 
 @RenameBot.on_message(filters.private & filters.command("start"))
-async def start_handler(bot: client, event: message):
+async def start_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
     if FSub == 400:
