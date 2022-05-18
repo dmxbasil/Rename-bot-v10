@@ -34,8 +34,9 @@ async def start_handler(bot: Client, event: Message):
     FSub = await ForceSub(bot, event)
     if FSub == 400:
         return
-    await event.reply_text(
-        text=f"Hi, {event.from_user.mention}\n{Config.START_TEXT}",
+    await event.reply_photo(
+        photo="https://telegra.ph/file/2e2a07e86066538ed7406.jpg",
+        caption=f"Hi, {event.from_user.mention}\n{Config.START_TEXT}",
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
