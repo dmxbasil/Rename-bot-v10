@@ -1,9 +1,9 @@
 import pymongo
 import os
-from configs import MONGODB_URI
+from configs import Config
 
 DB_NAME = os.environ.get("DB_NAME","bcast")
-mongo = pymongo.MongoClient(MONGODB_URI)
+mongo = pymongo.MongoClient(Config.MONGODB_URI)
 db = mongo[DB_NAME]
 dbcol = db["user"]
 
