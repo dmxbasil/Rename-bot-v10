@@ -1,11 +1,10 @@
-# (c) @AbirHasan2005
-
 import os
 import time
 import string
 import asyncio
 from pyromod import listen
-from pyrogram import Client, filters
+from pyrogram import Client as RenameBot
+from pyrogram import filters
 from asyncio import TimeoutError
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
