@@ -57,7 +57,7 @@ async def UploadFile(bot: Client, message: Message, file_path: str, file_size):
         )
     except Exception as err:
         try:
-            await message.edit(f"Failed to File!\n**Error:**\n`{err}`")
+            await message.edit((f"Failed to File!\n**Error:**\n`{err}`")
             await asyncio.sleep(50)
         except:
             print(f"Failed to Upload File!\nError: {err}")
@@ -140,7 +140,7 @@ async def UploadVideo(bot: Client, message: Message, file_path: str, file_size, 
             thumb=video_thumbnail,
             width=width,
             height=height,
-            caption=(f"{file_path.rsplit('/', 1)[-1]}\n**File Size:** {humanbytes(file_size)}") if (caption_ is None) else caption_),
+            caption=((f"{file_path.rsplit('/', 1)[-1]}\n**File Size:** {humanbytes(file_size)}") if (caption_ is None) else caption_),
             reply_markup=InlineKeyboardMarkup( [[
                 InlineKeyboardButton("📢 UPDATES 📢", url="https://t.me/mkn_bots_updates")
                 ]]
@@ -194,7 +194,7 @@ async def UploadAudio(bot: Client, message: Message, file_path: str, file_size, 
             duration=(duration if (duration is not None) else 0),
             performer=(performer if (performer is not None) else "Abir Hasan"),
             title=(title if (title is not None) else file_path.rsplit('/', 1)[-1].rsplit(".", 1)[0]),
-            caption=(f"{file_path.rsplit('/', 1)[-1]}\n**File Size:** {humanbytes(file_size)}") if (caption_ is None) else caption_),
+            caption=((f"{file_path.rsplit('/', 1)[-1]}\n**File Size:** {humanbytes(file_size)}") if (caption_ is None) else caption_),
             reply_markup=InlineKeyboardMarkup( [[
                 InlineKeyboardButton("📢 UPDATES 📢", url="https://t.me/mkn_bots_updates")
                 ]]
