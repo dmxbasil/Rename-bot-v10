@@ -3,10 +3,7 @@
 import os
 
 
-class Config(object):
-    API_ID = int(os.environ.get("API_ID", 12345))
-    API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+class Config(object):    
     SESSION_NAME = os.environ.get("SESSION_NAME", "Rename-Bot-0")
     SLEEP_TIME = int(os.environ.get("SLEEP_TIME", 5))
     BOT_OWNER = int(os.environ.get("BOT_OWNER", 1287407305))
