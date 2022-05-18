@@ -1,6 +1,8 @@
 from pyrogram import Client
 from configs import Config
 
+
+##################
 class App(Client):
 
     def __init__(self):
@@ -16,3 +18,19 @@ class App(Client):
 
 bot = App()
 bot.run()
+#####################
+
+
+
+if __name__ == "__main__" :
+    plugins = dict(
+        root="plugins"
+    )
+    app = Client(
+        "telegram",
+        api_id=Config.API_ID,
+        api_hash=Config.API_HASH,
+        bot_token=Config.BOT_TOKEN,
+        plugins={"root": "helpers"},
+    )
+    app.run()
