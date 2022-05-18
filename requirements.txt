@@ -6,4 +6,4 @@ motor
 Pillow
 hachoir
 pyromod
-pymongo
+
