@@ -62,18 +62,17 @@ async def start_handler(bot: Client, event: Message):
         return
     await event.reply_photo(
         photo="https://telegra.ph/file/2e2a07e86066538ed7406.jpg",
-        caption=f"Hi, {event.from_user.mention}\n{Config.START_TEXT}",
+        caption=(Config.START_TEXT.format(event.from_user.mention)),
         quote=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [InlineKeyboardButton("Channel", url="https://t.me/mkn_bots_updates"),
-                 InlineKeyboardButton("Support", url="https://t.me/MKN_BOTZ_DISCUSSION_GROUP")],
-                [InlineKeyboardButton("🍃 Help", callback_data="help"),
-                 InlineKeyboardButton("🗣️ About", callback_data="about")],
-                [InlineKeyboardButton("🔐 Close", callback_data="closeMeh")]
-            ]
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("𝚄𝙿𝚃𝙰𝚃𝙴𝚂", url="https://t.me/mkn_bots_updates"),
+            InlineKeyboardButton("𝚂𝚄𝙿𝙿𝙾𝚁𝚃", url="https://t.me/MKN_BOTZ_DISCUSSION_GROUP")
+            ],[
+            InlineKeyboardButton("🍃 𝙷𝙴𝙻𝙿", callback_data="help"),
+            InlineKeyboardButton("⚙️ 𝙰𝙱𝙾𝚄𝚃", callback_data="about")
+            ]]
+            )
         )
-    )
 
 
 @Renamer.on_message(filters.private & filters.command("help"))
@@ -87,9 +86,9 @@ async def start_handler(bot: Client, event: Message):
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("🏡 Home", callback_data="home"),
-                 InlineKeyboardButton("🗣️ About", callback_data="about")],
-                [InlineKeyboardButton("🔐 Close", callback_data="closeMeh")]
+                [InlineKeyboardButton("🏡 𝙷𝙾𝙼𝙴", callback_data="home"),
+                 InlineKeyboardButton("⚙️ 𝙰𝙱𝙾𝚄𝚃", callback_data="about")],
+                [InlineKeyboardButton("🔐 𝙲𝙻𝙾𝚂𝙴", callback_data="closeMeh")]
             ]
         )
     )
@@ -106,9 +105,9 @@ async def start_handler(bot: Client, event: Message):
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("🏡 Home", callback_data="home"),
-                 InlineKeyboardButton("🍃 Help", callback_data="help")],
-                [InlineKeyboardButton("🔐 Close", callback_data="closeMeh")]
+                [InlineKeyboardButton("🏡 𝙷𝙾𝙼𝙴", callback_data="home"),
+                 InlineKeyboardButton("🍃 𝙷𝙴𝙻𝙿", callback_data="help")],
+                [InlineKeyboardButton("🔐 𝙲𝙻𝙾𝚂𝙴", callback_data="closeMeh")]
             ]
         )
     )
@@ -421,7 +420,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                     "Custom Caption Removed Successfully!",
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton("Here Settings", callback_data="openSettings"),
-                         InlineKeyboardButton("🔐 Close", callback_data="closeMeh")]
+                         InlineKeyboardButton("🔐 𝙲𝙻𝙾𝚂𝙴", callback_data="closeMeh")]
                     ])
                 )
             elif ask_.text and (ask_.text.startswith("/") is True):
@@ -441,8 +440,8 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton("♻ Help", callback_data="help"),
-		InlineKeyboardButton("🏠 Hᴏᴍᴇ", callback_data="home")
+                InlineKeyboardButton("🍃 𝙷𝙴𝙻𝙿", callback_data="help"),
+		InlineKeyboardButton("🏠 𝙷𝙾𝙼𝙴", callback_data="home")
 	        ]]
 	        )
             )
@@ -453,8 +452,8 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton("👥 Aʙᴏᴜᴛ", callback_data="about"),
-	        InlineKeyboardButton("🏠 Hᴏᴍᴇ", callback_data="home")
+                InlineKeyboardButton("⚙️ 𝙰𝙱𝙾𝚄𝚃", callback_data="about"),
+	        InlineKeyboardButton("🏠 𝙷𝙾𝙼𝙴", callback_data="home")
 		]]               
                 )
             )
@@ -465,14 +464,12 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/mkn_bots_updates"),
-		InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url="https://t.me/MKN_BOTZ_DISCUSSION_GROUP")
-		],[
-                InlineKeyboardButton("🍃 Help ", callback_data="help"),
-                InlineKeyboardButton("🗣️ About", callback_data="about")
+                InlineKeyboardButton("𝚄𝙿𝚃𝙰𝚃𝙴𝚂", url="https://t.me/mkn_bots_updates"),
+                InlineKeyboardButton("𝚂𝚄𝙿𝙿𝙾𝚁𝚃", url="https://t.me/MKN_BOTZ_DISCUSSION_GROUP")
                 ],[
-                InlineKeyboardButton("🔐 Cʟᴏsᴇ ", callback_data="closeMeh") 
-	        ]]
+                InlineKeyboardButton("🍃 𝙷𝙴𝙻𝙿", callback_data="help"),
+                InlineKeyboardButton("⚙️ 𝙰𝙱𝙾𝚄𝚃", callback_data="about")
+                ]]
                 )
             )
 
