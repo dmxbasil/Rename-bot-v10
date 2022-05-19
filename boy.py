@@ -62,7 +62,7 @@ async def start_handler(bot: Client, event: Message):
         return
     await event.reply_photo(
         photo="https://telegra.ph/file/2e2a07e86066538ed7406.jpg",
-        caption=f"𝙷𝙴𝙻𝙻𝙾 {event.from_user.mention} 👋 \n\n{Config.START_TEXT}",
+        caption=f"𝙷𝙴𝙻𝙻𝙾 {event.from_user.mention} 👋 \n{Config.START_TEXT}",
         quote=True,
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("𝚄𝙿𝚃𝙰𝚃𝙴𝚂", url="https://t.me/mkn_bots_updates"),
