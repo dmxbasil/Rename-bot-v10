@@ -16,8 +16,6 @@ class Config(object):
     BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
     ONE_PROCESS_ONLY = bool(os.environ.get("ONE_PROCESS_ONLY", False))
     START_TEXT = """
-𝙷𝙴𝙻𝙻𝙾 {} 👋
-
 𝚃𝚑𝚒𝚜 𝚒𝚜 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝙵𝚒𝚕𝚎 𝚁𝚎𝚗𝚊𝚖𝚎𝚛 𝙱𝚘𝚝.
 𝚂𝚎𝚗𝚍 𝚖𝚎 𝚊𝚗𝚢 𝚝𝚢𝚙𝚎 𝚘𝚏 𝚖𝚎𝚍𝚒𝚊  𝚘𝚛 𝙵𝚒𝚕𝚎 𝚝𝚘 𝚁𝚎𝚗𝚊𝚖𝚎 𝚒𝚝 .
 
@@ -30,7 +28,7 @@ class Config(object):
 ➠ 𝚂𝚎𝚗𝚍 𝚊𝚗𝚢 𝙵𝚒𝚕𝚎 𝚘𝚛 𝚖𝚎𝚍𝚒𝚊 𝚢𝚘𝚞 𝚠𝚊𝚗𝚝 𝚝𝚘 𝚛𝚎𝚗𝚊𝚖𝚎..... 
 ➠ 𝚃𝚑𝚊𝚝'𝚜 𝚒𝚝, 𝚊𝚗𝚍 𝚛𝚎𝚜𝚝 𝚒𝚜 𝚖𝚒𝚗𝚎 𝚠𝚘𝚛𝚔.....
 
-<u>📝 𝙰𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜 📝</u>
+📝 𝙰𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜 📝
 
 - /start - 𝚂𝚝𝚊𝚛𝚝 𝚝𝚑𝚎 𝙱𝚘𝚝
 - /help - 𝙷𝚘𝚠 𝚝𝚘 𝚄𝚜𝚎
