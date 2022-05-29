@@ -44,7 +44,7 @@ async def UploadFile(bot: Client, message: Message, file_path: str, file_size):
             thumb=file_thumbnail,
             caption=((f"{file_path.rsplit('/', 1)[-1]}\n🗂**File Size:** {humanbytes(file_size)}") if (caption_ is None) else caption_),
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton("📢 UPDATES 📢", url="https://t.me/mkn_bots_updates")
+                InlineKeyboardButton("📢 UPDATES 📢", url="https://t.me/dmx_bots")
                 ]]
                 )
             )
@@ -142,7 +142,7 @@ async def UploadVideo(bot: Client, message: Message, file_path: str, file_size, 
             height=height,
             caption=((f"{file_path.rsplit('/', 1)[-1]}\n**File Size:** {humanbytes(file_size)}") if (caption_ is None) else caption_),
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton("📢 UPDATES 📢", url="https://t.me/mkn_bots_updates")
+                InlineKeyboardButton("📢 UPDATES 📢", url="https://t.me/dmx_bots")
                 ]]
                 )
             )
@@ -196,7 +196,7 @@ async def UploadAudio(bot: Client, message: Message, file_path: str, file_size, 
             title=(title if (title is not None) else file_path.rsplit('/', 1)[-1].rsplit(".", 1)[0]),
             caption=((f"{file_path.rsplit('/', 1)[-1]}\n**File Size:** {humanbytes(file_size)}") if (caption_ is None) else caption_),
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton("📢 UPDATES 📢", url="https://t.me/mkn_bots_updates")
+                InlineKeyboardButton("📢 UPDATES 📢", url="https://t.me/dmx_bots")
                 ]]
                 )
             )
