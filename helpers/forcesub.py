@@ -9,7 +9,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 async def ForceSub(bot: Client, event: Message):
     """
-    Custom Pyrogram Based Telegram Bot's Force Subscribe Function by @AbirHasan2005.
+    Custom Pyrogram Based Telegram Bot's Force Subscribe Function 
     If User is not Joined Force Sub Channel Bot to Send a Message & ask him to Join First.
     
     :param bot: Pass Client.
@@ -24,7 +24,7 @@ async def ForceSub(bot: Client, event: Message):
         fix_ = await ForceSub(bot, event)
         return fix_
     except Exception as err:
-        print(f"Unable to do Force Subscribe to {Config.UPDATES_CHANNEL}\n\nError: {err}\n\nContact Support Group: https://t.me/TeleRoid14")
+        print(f"Unable to do Force Subscribe to {Config.UPDATES_CHANNEL}\n\nError: {err}\n\nContact Support Group: https://t.me/dmx_chating")
         return 200
     try:
         user = await bot.get_chat_member(chat_id=(int(Config.UPDATES_CHANNEL) if Config.UPDATES_CHANNEL.startswith("-100") else Config.UPDATES_CHANNEL), user_id=event.from_user.id)
