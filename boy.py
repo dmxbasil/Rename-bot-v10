@@ -61,11 +61,11 @@ async def start_handler(bot: Client, event: Message):
     if FSub == 400:
         return
     await event.reply_photo(
-        photo="https://telegra.ph/file/2e2a07e86066538ed7406.jpg",
+        photo="https://te.legra.ph/file/32850b19884aaf32de699.jpg",
         caption=f"𝙷𝙴𝙻𝙻𝙾 {event.from_user.mention} 👋 \n{Config.START_TEXT}",        
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("𝚄𝙿𝚃𝙰𝚃𝙴𝚂", url="https://t.me/mkn_bots_updates"),
-            InlineKeyboardButton("𝚂𝚄𝙿𝙿𝙾𝚁𝚃", url="https://t.me/MKN_BOTZ_DISCUSSION_GROUP")
+            InlineKeyboardButton("𝚄𝙿𝚃𝙰𝚃𝙴𝚂", url="https://t.me/dmx_bots"),
+            InlineKeyboardButton("𝚂𝚄𝙿𝙿𝙾𝚁𝚃", url="https://t.me/dmx_chating")
             ],[
             InlineKeyboardButton("🍃 𝙷𝙴𝙻𝙿", callback_data="help"),
             InlineKeyboardButton("⚙️ 𝙰𝙱𝙾𝚄𝚃", callback_data="about")
@@ -463,8 +463,8 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton("𝚄𝙿𝚃𝙰𝚃𝙴𝚂", url="https://t.me/mkn_bots_updates"),
-                InlineKeyboardButton("𝚂𝚄𝙿𝙿𝙾𝚁𝚃", url="https://t.me/MKN_BOTZ_DISCUSSION_GROUP")
+                InlineKeyboardButton("𝚄𝙿𝚃𝙰𝚃𝙴𝚂", url="https://t.me/dmx_bots"),
+                InlineKeyboardButton("𝚂𝚄𝙿𝙿𝙾𝚁𝚃", url="https://t.me/dmx_chating")
                 ],[
                 InlineKeyboardButton("🍃 𝙷𝙴𝙻𝙿", callback_data="help"),
                 InlineKeyboardButton("⚙️ 𝙰𝙱𝙾𝚄𝚃", callback_data="about")
