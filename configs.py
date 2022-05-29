@@ -47,7 +47,7 @@ class Config(object):
 │
 ├📝**ʟᴀɴɢ** [ᴩyᴛʜᴏɴ 3](https://www.python.org)
 │
-├📚**ʟɪʙʀᴀʀᴛ** [ᴩyʀᴏɢʀᴀᴍ](https://docs.pyrogram.org)
+├📚**ʟɪʙʀᴀʀy** [ᴩyʀᴏɢʀᴀᴍ](https://docs.pyrogram.org)
 │
 ├📡**ꜱᴇʀᴠᴇʀ** [ʜᴇʀᴏᴋᴜ](https://heroku.com)
 │
